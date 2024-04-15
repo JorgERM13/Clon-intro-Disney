@@ -1,0 +1,177 @@
+<!DOCTYPE html> <!-- TIPO DE DOCUMENTO -->
+<html lang="es"> <!-- IDIOMA -->
+<head>
+    <meta charset="UTF-8"> <!-- CODIFICACION DE CARACTERES -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="favicon" href="../favicon.png" type="image/x-icon">
+    <title>Document</title>
+    <style>
+        /* HOJA DE ESTILO INTERNA */
+        * { /* UNIVERSAL o GLOBAL */
+            margin: 0;
+            padding: 0;
+        }
+
+        body { /* ETIQUETA */
+            padding: 15px;
+            background-color: azure;
+        }
+
+        header {
+            background-color: aquamarine;
+            padding: 15px;
+            padding-left: 30px;
+        }
+
+        .fondocuadro {
+            margin-top: 20px;
+            background-color: beige; 
+            padding-left:15px; 
+            padding-right: 15px;
+        }
+
+        .margenabajo{
+            margin-bottom: 20px;
+        }
+
+        .mayusculas {
+            text-transform: uppercase;
+        }
+
+        .clase1 {
+            color: burlywood;
+            text-align: center;
+        }
+
+        .cafejustificado{
+            color:brown; 
+            text-align: justify;
+        }
+
+        article > p {
+            color:blue;
+        }
+
+        #ipsum{ /* SELECTOR POR ID */
+            color: red;
+        }
+
+        .contenedor{
+            margin-top: 20px;
+            /* background-color: #cccccc; */
+            background-image: url('../img/fondo1.jpg');
+            background-size: cover;
+        }
+
+        .transparencia{
+            padding: 15px;
+            background-color: rgb(0, 0, 0, 0.3);
+        }
+
+        .contenedor > div > h3 {
+            color: #ffffff;
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .contenedor > div > p {
+            color:beige;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .input-txt{
+            margin:5px;
+            padding: 5px;
+            width: 200px;
+            font-size: 18px;
+            border-radius: 25px;
+            color:#000000b3;
+            border-color: violet;
+        }
+
+        .input-txt:focus{  /* PSEUDOCLASE */
+            border-color: #8317feb3;
+            background-color: rgb(249, 224, 249);
+            border: 2px solid #8317feb3;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        .btn{
+            margin-top: 15px;
+            padding: 10px 30px;
+            background-color: #8317fe;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header> <!-- CABECERA  -->
+        <nav>
+            <ul>
+                <li><a href="#">Pagina 1</a></li>
+                <li><a href="#">Pagina 2</a></li>
+                <li><a href="#">Pagina 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO -->
+    <section class="fondocuadro">
+        <h1 class="clase1">Titulo de la pagina</h1>
+        <p class="cafejustificado">Este es el contenido de la pagina
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, iusto.
+        </p>
+    </section>
+
+    <article class="fondocuadro margenabajo">
+        <h2 class="clase1 mayusculas">Titulo del articulo</h2>
+        <p>Este es el contenido del articulo</p>
+    </article>
+
+    <article class="fondocuadro margenabajo">
+        <p>
+            Lorem <label id="ipsum">ipsum dolor</label> sit amet consectetur adipisicing elit. Placeat possimus illum sit.
+        </p>
+    </article>
+
+
+    <!-- CSS -->
+    <!-- INTEGRACION DEL CSS AL HTML -->
+    <!-- EN LINEA: style="" -->
+    <!-- en la cabecera, HOJA DE ESTILO INTERNA -->
+    <!-- HOJA DE ESTILO EXTERNA -->
+
+    <hr>
+
+
+    <section class="contenedor">
+        <div class="transparencia">
+            <h3>MI PRIMER FORMULARIO CON ESTILOS</h3>
+            <p>aprendiendo css</p>
+            <form action="mailto:jose.mamani@hamiloes.coll" method="post">
+                <input type="text" name="telefono" id="telefono" class="input-txt" placeholder="Telefono..." required>
+                <br>
+                <input type="email" name="correo" id="correo" class="input-txt" placeholder="Emial..." required>
+                <br>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <br><br><br><br><br><br><br><br>
+
+    <footer> <!-- PIE DE PAGINA -->
+        <p>Copyright - 2024</p>
+    </footer>
+    
+</body>
+</html>
